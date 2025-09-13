@@ -1,0 +1,19 @@
+/* Custom Styles */
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Notification popup */
+#notification.show {
+  display: block !important;
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
