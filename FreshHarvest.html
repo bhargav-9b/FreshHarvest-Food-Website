@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshHarvest Organic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-green-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">FreshHarvest</h1>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl">☰</button>
+    <nav id="mobileMenu" class="hidden md:flex gap-6">
+      <a href="#products" class="hover:underline">Products</a>
+      <a href="#testimonials" class="hover:underline">Testimonials</a>
+      <a href="#newsletter" class="hover:underline">Subscribe</a>
+      <span class="bg-red-500 text-white px-2 py-1 rounded ml-4">Cart: <span id="cartCount">0</span></span>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-16 bg-gradient-to-r from-green-100 to-green-300" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-4">Organic & Fresh, Straight from Farm 🌱</h2>
+    <p class="text-lg mb-6">Healthy living starts with healthy eating.</p>
+    <a href="#products" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Shop Now</a>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-16 max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-10">Our Products</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-up">
+        <img src="images/vegetables.jpg" alt="Fresh Vegetables">
+        <div class="p-4">
+          <h4 class="font-bold">Fresh Vegetables</h4>
+          <p class="text-sm text-gray-600">Farm-picked seasonal vegetables.</p>
+          <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded mt-2">Add to Cart</button>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-up">
+        <img src="images/fruits.jpg" alt="Organic Fruits">
+        <div class="p-4">
+          <h4 class="font-bold">Organic Fruits</h4>
+          <p class="text-sm text-gray-600">Sweet, juicy and chemical-free.</p>
+          <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded mt-2">Add to Cart</button>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-up">
+        <img src="images/dairy.jpg" alt="Fresh Dairy">
+        <div class="p-4">
+          <h4 class="font-bold">Fresh Dairy</h4>
+          <p class="text-sm text-gray-600">Pure milk, butter, and cheese.</p>
+          <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded mt-2">Add to Cart</button>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-up">
+        <img src="images/grains.jpg" alt="Whole Grains">
+        <div class="p-4">
+          <h4 class="font-bold">Whole Grains</h4>
+          <p class="text-sm text-gray-600">Wholesome grains for daily diet.</p>
+          <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded mt-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 bg-green-100" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-center mb-10">What Our Customers Say</h3>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-white shadow rounded-lg p-6">
+        <p>"FreshHarvest always delivers the best quality. My kids love the fruits!"</p>
+        <span class="block mt-4 font-bold">– Anjali</span>
+      </div>
+      <div class="bg-white shadow rounded-lg p-6">
+        <p>"Their vegetables are super fresh and tasty. Highly recommend."</p>
+        <span class="block mt-4 font-bold">– Ramesh</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="py-16 text-center" data-aos="fade-up">
+    <h3 class="text-2xl font-bold mb-4">Join Our Newsletter</h3>
+    <p class="mb-6">Get updates on new products and offers directly in your inbox.</p>
+    <form class="flex justify-center gap-4 max-w-md mx-auto">
+      <input type="email" placeholder="Enter your email" class="flex-1 p-3 border rounded-lg" required>
+      <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Notification -->
+  <div id="notification" class="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded hidden shadow-lg">
+    <span id="notificationText"></span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 text-white p-6 text-center">
+    © 2025 FreshHarvest. All rights reserved.
+    <form class="mt-4 flex justify-center gap-4">
+      <input type="email" placeholder="Your email" class="p-2 rounded text-black" required>
+      <button type="submit" class="bg-white text-green-600 px-4 py-2 rounded">Subscribe</button>
+    </form>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
